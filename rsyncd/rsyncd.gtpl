@@ -14,5 +14,5 @@ socket options = SO_KEEPALIVE
     read only = no
     list = no
     read only = true
-    secrets file = /etc/rsyncd.secrets
+    password = {{ .password }}
     hosts allow = {{ .hosts_allow }}

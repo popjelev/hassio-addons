@@ -1,7 +1,7 @@
-version: "1.0.0"
 name: rsyncd
-slug: rsyncd
 description: rsync daemon
+version: "1.0.1"
+slug: rsyncd
 url: "https://github.com/popjelev/hassio-addons/tree/main/rsyncd"
 arch:
   - i386
@@ -14,10 +14,10 @@ init: false
 startup: services
 host_network: true
 options:
-  secrets: "backups:replace_with_bcrypt_hash_of_password"
+  password: "replace_with_bcrypt_hash_of_password"
   hosts_allow: "0.0.0.0/24"
 schema:
-  secrets: str
+  password: str
   hosts_allow: str
 map:
   - backup:ro
